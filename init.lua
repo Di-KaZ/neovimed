@@ -1,3 +1,7 @@
+package.path =
+    "/home/getmoussed/.config/nvim/?.lua;"
+    .. package.path
+
 -- Clone 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
 local path_package = vim.fn.stdpath('data') .. '/site/'
 local mini_path = path_package .. 'pack/deps/start/mini.nvim'

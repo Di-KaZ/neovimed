@@ -10,6 +10,9 @@ local bufferline = require("bufferline")
 bufferline.setup({
 	options = {
 		-- separator_style = "slope"
+		buffer_close_icon = "✕",
+		left_trunc_marker = "",
+		right_trunc_marker = "",
 	}
 })
 

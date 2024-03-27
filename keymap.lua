@@ -50,6 +50,7 @@ nmap('<leader>cl', 'GitConflictListQf', "Conflict List")
 nmap("<leader>bp", "BufferLinePick", "Jump to buffer")
 nmap("<S-Tab>", "BufferLineCyclePrev", "Prev buffer")
 nmap("<Tab>", "BufferLineCycleNext", "Next buffer")
+nmap("<leader>bc", "lua MiniBuffermove.delete(0)", "Close buffer")
 
 -- Terminals
 nmap("<leader>tv", "Vterm", "Vertical Terminal")

@@ -15,12 +15,14 @@ load_plugins(
 		{ name = 'basics',             priority = 1000 },
 		{ name = 'noice',              priority = 100 },
 		{ name = 'heirline',           priority = 50 },
+		{ name = 'sessions',           priority = 110 },
 
 		-- shortcut
 		{ name = 'move',               priority = 50 },
 		{ name = 'comment',            priority = 50 },
 		{ name = 'pairs',              priority = 50 },
 		{ name = 'splitjoin',          priority = 50 },
+		{ name = 'buffermove',         priority = 50 },
 
 		-- ui
 		{ name = 'bufferline',         priority = 100 },
