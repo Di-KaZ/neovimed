@@ -40,7 +40,7 @@ load_plugins(
 		{ name = 'cmp',                priority = 51 },
 		{ name = 'flutter',            priority = 50 },
 		{ name = 'conform',            priority = 50 },
-		{ name = 'codeium',            priority = 50 },
+		{ name = 'codeium',            priority = 40 },
 		{ name = 'treesitter',         priority = 110 },
 
 		-- files management

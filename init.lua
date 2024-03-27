@@ -1,7 +1,3 @@
-package.path =
-    "/home/getmoussed/.dotfiles/pkgs/new_nvim/?.lua;"
-    .. package.path
-
 -- Clone 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
 local path_package = vim.fn.stdpath('data') .. '/site/'
 local mini_path = path_package .. 'pack/deps/start/mini.nvim'
@@ -15,12 +11,10 @@ if not vim.loop.fs_stat(mini_path) then
 	vim.cmd('packadd mini.nvim | helptags ALL')
 	vim.cmd('echo "Installed `mini.nvim`" | redraw')
 end
-
-require 'options'
-
 -- Set up 'mini.deps' (customize to your liking)
 require('mini.deps').setup({ path = { package = path_package } })
 
+require 'options'
 require 'keymap'
 require 'plugins.init'
 require 'gui.neovide'
