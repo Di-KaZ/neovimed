@@ -10,56 +10,54 @@ end
 load_plugins(
 	{
 		--- base
-		{ name = 'colorscheme',        priority = 1101 },
-		{ name = "themery",            priority = 1001 },
-		{ name = 'basics',             priority = 1000 },
-		{ name = 'noice',              priority = 100 },
-		{ name = 'heirline',           priority = 50 },
-		{ name = 'sessions',           priority = 110 },
+		{ name = 'colorscheme',      priority = 1101 },
+		{ name = "themery",          priority = 1001 },
+		{ name = 'basics',           priority = 1000 },
+		{ name = 'heirline',         priority = 50 },
 
 		-- shortcut
-		{ name = 'move',               priority = 50 },
-		{ name = 'comment',            priority = 50 },
-		{ name = 'pairs',              priority = 50 },
-		{ name = 'splitjoin',          priority = 50 },
-		{ name = 'buffermove',         priority = 50 },
+		{ name = 'smart-splits',     priority = 50 },
+		{ name = 'comment',          priority = 50 },
+		{ name = 'pairs',            priority = 50 },
+		{ name = 'splitjoin',        priority = 50 },
+		{ name = 'buffermove',       priority = 50 },
 
 		-- ui
-		{ name = 'bufferline',         priority = 100 },
-		{ name = 'starter',            priority = 100 },
-		{ name = 'indent-blankline',   priority = 49 },
-		{ name = 'reactive',           priority = 50 },
-		{ name = 'clue',               priority = 50 },
-		{ name = 'highlight-colors',   priority = 50 },
-		{ name = 'surround',           priority = 50 },
-		{ name = 'rainbow-delimiters', priority = 50 },
-		{ name = 'todo-comments',      priority = 50 },
+		{ name = 'bufferline',       priority = 100 },
+		{ name = 'animate',          priority = 100 },
+		{ name = 'starter',          priority = 100 },
+		{ name = 'hlchunk',          priority = 49 },
+		{ name = 'reactive',         priority = 50 },
+		{ name = 'clue',             priority = 50 },
+		{ name = 'highlight-colors', priority = 50 },
+		{ name = 'surround',         priority = 50 },
+		{ name = 'todo-comments',    priority = 50 },
+		{ name = 'image',            priority = 500 },
 
 		-- lsp
-		{ name = 'lsp_lines',          priority = 51 },
-		{ name = 'lspconfig',          priority = 50 },
-		{ name = 'lspsaga',            priority = 50 },
-		{ name = 'cmp',                priority = 51 },
-		{ name = 'flutter',            priority = 50 },
-		{ name = 'conform',            priority = 50 },
-		{ name = 'codeium',            priority = 40 },
-		{ name = 'treesitter',         priority = 110 },
+		{ name = 'lspconfig',        priority = 50 },
+		{ name = 'lspsaga',          priority = 50 },
+		{ name = 'cmp',              priority = 51 },
+		{ name = 'flutter',          priority = 50 },
+		{ name = 'conform',          priority = 50 },
+		-- { name = 'codeium',          priority = 40 },
+		{ name = 'copilot',          priority = 40 },
+		{ name = 'treesitter',       priority = 110 },
 
 		-- files management
-		{ name = 'pick',               priority = 50 },
-		{ name = 'files',              priority = 50 },
-		{ name = 'extra',              priority = 50 },
+		{ name = 'telescope',        priority = 50 },
+		{ name = 'pick',             priority = 50 },
+		{ name = 'files',            priority = 50 },
+		{ name = 'extra',            priority = 50 },
+		{ name = 'nvim-tree',        priority = 50 },
+
 
 		-- debugging
-		{ name = 'dap',                priority = 50 },
+		{ name = 'dap',              priority = 50 },
 
 		-- git
-		{ name = 'gitsigns',           priority = 50 },
-		{ name = 'neogit',             priority = 50 },
-		{ name = 'git-conflict',       priority = 50 },
-		{ name = 'fugit2',             priority = 50 },
-
-		-- terminal
-		{ name = 'termim',             priority = 50 },
+		{ name = 'gitsigns',         priority = 50 },
+		{ name = 'neogit',           priority = 50 },
+		{ name = 'git-conflict',     priority = 50 },
 	}
 )

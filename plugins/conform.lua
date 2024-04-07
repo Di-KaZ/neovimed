@@ -6,4 +6,7 @@ require("conform").setup({
 		timeout_ms = 500,
 		lsp_fallback = true,
 	},
+	formatters_by_ft = {
+		javascript = { { "prettierd", "prettier" } },
+	}
 })

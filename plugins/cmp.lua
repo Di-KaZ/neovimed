@@ -2,6 +2,7 @@ MiniDeps.add("hrsh7th/nvim-cmp")
 MiniDeps.add("dcampos/nvim-snippy")
 MiniDeps.add("hrsh7th/cmp-nvim-lsp")
 MiniDeps.add("onsails/lspkind.nvim")
+MiniDeps.add("hrsh7th/cmp-emoji")
 
 local cmp = require("cmp")
 local snippy = require("snippy")
@@ -11,6 +12,14 @@ local has_words_before = function()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
+
+local lsp_kind = require("lspkind")
+
+lsp_kind.init({
+	Codeium = '',
+	Copilot = ''
+})
+
 
 local fallback_kind_symbol = {
 	["Codeium"] = ''
@@ -25,6 +34,9 @@ cmp.setup({
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
+	},
+	experimental = {
+		ghost_text = true,
 	},
 	mapping = cmp.mapping.preset.insert({
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -63,17 +75,19 @@ cmp.setup({
 		['<S-TAB>'] = cmp.mapping.select_prev_item(),
 	}),
 	sources = cmp.config.sources({
+		{ name = 'copilot' },
 		{ name = 'codeium' },
+		{ name = 'emoji' },
 		{ name = 'nvim_lsp' },
-		{ name = 'snippy' }, -- For snippy users.
+		{ name = 'snippy' },
 	}, {
 		{ name = 'buffer' },
 	}),
 	---@diagnostic disable-next-line: missing-fields
 	formatting = {
-		fields = { "kind", "abbr", },
+		fields = { "kind", "abbr" },
 		format = function(entry, vim_item)
-			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry,
+			local kind = lsp_kind.cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry,
 				vim_item)
 			local strings = vim.split(kind.kind, "%s", { trimempty = true })
 			if #strings == 1 then

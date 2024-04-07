@@ -9,6 +9,11 @@ local colorschemes = {
 	{ source = "savq/melange-nvim",            name = "melange" },
 	{ source = "FrenzyExists/aquarium-vim",    name = "aquarium" },
 	{ source = "ramojus/mellifluous.nvim",     name = "mellifluous" },
+	{ source = "mcchrish/zenbones.nvim",       name = "zenbones" },
+	{ source = "ribru17/bamboo.nvim",          name = "bamboo" },
+	{ source = "kartikp10/noctis.nvim",        name = "noctis" },
+	{ source = "AhmedAbdulrahman/aylin.vim",   name = "aylin" },
+	{ source = "kvrohit/substrata.nvim",       name = "substrata" },
 }
 
 MiniDeps.add("rktjmp/lush.nvim")
@@ -23,10 +28,10 @@ local function map(tbl, f)
 end
 
 local themes = map(colorschemes, function(scheme)
-	MiniDeps.add(scheme.source)
 	return {
 		name = scheme.name,
 		colorscheme = scheme.name,
+		before = "MiniDeps.add(\"" .. scheme.source .. "\")"
 	}
 end)
 
@@ -42,6 +47,17 @@ require("transparent").setup({
 		"NoiceCmdlinePopupBorder",
 		"NotifyBackground",
 		"DiagnosticSignInfo",
+		"TelescopeNormal",
+		"TelescopeBorder",
+		"TelescopePreviewNormal",
+		"TelescopeResultsNormal",
+		"TelescopeResultsBorder",
+		"TelescopePromptBorder",
+		"TelescopePromptNormal",
+		"TelescopePreviewBorder",
+		"GitSignsAdd",
+		"GitSignsChange",
+		"GitSignsRemove",
 	},
 })
 

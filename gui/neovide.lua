@@ -1,6 +1,6 @@
 if vim.g.neovide == nil then return end
 
-vim.o.guifont = "Monaspace Neon:h14"
+vim.o.guifont = "Monaspace Krypton:h14"
 
 vim.cmd("TransparentDisable")
 

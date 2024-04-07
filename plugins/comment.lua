@@ -1,4 +1,15 @@
 require("mini.comment").setup({
+	options = {
+		custom_commentstring = function(ref)
+			-- handle svelte comments using tree-sitter
+			-- beacause svelte has different comment syntax
+			-- in script tag and html tag
+			-- so using tree-sitter check if cursors pos is not in <script>
+			-- then use <!-- -->
+			-- else use default mini-comment
+			return MiniComment.get_commentstring(ref)
+		end,
+	},
 	mappings = {
 		-- Toggle comment (like `gcip` - comment inner paragraph) for both
 		-- Normal and Visual modes

@@ -1,5 +1,7 @@
 -- Themery block
 -- This block will be replaced by Themery.
-vim.cmd("colorscheme melange")
-vim.g.theme_id = 6
+MiniDeps.add("AhmedAbdulrahman/aylin.vim")
+
+vim.cmd("colorscheme aylin")
+vim.g.theme_id = 12
 -- end themery block

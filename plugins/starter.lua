@@ -32,3 +32,6 @@ require("mini.starter").setup({
 	header = table.concat(logo, "\n"),
 	footer = "",
 })
+
+-- local test = require("image").from_file("~/Downloads/test.png")
+-- test:render()
