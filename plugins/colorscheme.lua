@@ -14,6 +14,7 @@ local colorschemes = {
 	{ source = "kartikp10/noctis.nvim",        name = "noctis" },
 	{ source = "AhmedAbdulrahman/aylin.vim",   name = "aylin" },
 	{ source = "kvrohit/substrata.nvim",       name = "substrata" },
+	{ source = "Biscuit-Colorscheme/nvim",  name = "biscuit" },
 }
 
 MiniDeps.add("rktjmp/lush.nvim")

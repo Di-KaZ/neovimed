@@ -27,7 +27,7 @@ load_plugins(
 		{ name = 'animate',          priority = 100 },
 		{ name = 'starter',          priority = 100 },
 		{ name = 'hlchunk',          priority = 49 },
-		{ name = 'reactive',         priority = 50 },
+		-- { name = 'reactive',         priority = 50 },
 		{ name = 'clue',             priority = 50 },
 		{ name = 'highlight-colors', priority = 50 },
 		{ name = 'surround',         priority = 50 },

@@ -4,3 +4,7 @@ MiniDeps.add({
 		'nvim-lua/plenary.nvim'
 	}
 })
+
+require('telescope').setup({
+	file_ignore_patterns = { "node_modules" }
+})
