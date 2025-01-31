@@ -22,7 +22,7 @@ end
 -- nmap("<leader>do", "DapStepOver", "Step Over")
 
 -- Files management
-nmap("<C-e>", "lua MiniFiles.open()", "Find files")
+nmap("<C-e>", function() require('mini.files').open() end, "Find files")
 nmap("<leader>ff", function() require('telescope.builtin').find_files() end, "Find files")
 nmap("<leader>fw", function() require('telescope.builtin').live_grep() end, "Find match")
 
@@ -39,7 +39,7 @@ nmap("<leader>gs", function() require('telescope.builtin').lsp_document_symbols(
 nmap("<leader>gS", function() require('telescope.builtin').lsp_workspace_symbols() end, "Workspace Symbols")
 
 -- Git
-nmap('<leader>cn', "Neogit", "Neogit")
+-- nmap('<leader>cn', "Neogit", "Neogit")
 -- nmap('<leader>co', 'GitConflictChooseOurs', "Accept Ours")
 -- nmap('<leader>ct', 'GitConflictChooseTheirs', "Accept Theirs")
 -- nmap('<leader>cb', 'GitConflictChooseBoth', "Accept Both")
@@ -47,12 +47,13 @@ nmap('<leader>cn', "Neogit", "Neogit")
 -- nmap('<leader>cj', 'GitConflictNextConflict', "Next Conflict")
 -- nmap('<leader>ck', 'GitConflictPrevConflict', "Prev Conflict")
 -- nmap('<leader>cl', 'GitConflictListQf', "Conflict List")
+nmap('<leader>cb', function() require('snacks').git.blame_line() end, 'Git Blame')
 
 -- Buffers
 nmap("<leader>bp", "BufferLinePick", "Jump to buffer")
 nmap("<S-Tab>", "BufferLineCyclePrev", "Prev buffer")
 nmap("<Tab>", "BufferLineCycleNext", "Next buffer")
-nmap("<leader>bc", "lua MiniBuffermove.delete(0)", "Close buffer")
+nmap("<leader>bc", function() require('mini.bufremove').delete(0) end, "Close buffer")
 
 -- SmartSplits
 nmap('<A-h>', require('smart-splits').resize_left, "Resize left")
@@ -72,3 +73,6 @@ nmap('<leader><leader>h', require('smart-splits').swap_buf_left, "Swap left")
 nmap('<leader><leader>j', require('smart-splits').swap_buf_down, "Swap down")
 nmap('<leader><leader>k', require('smart-splits').swap_buf_up, "Swap up")
 nmap('<leader><leader>l', require('smart-splits').swap_buf_right, "Swap right")
+
+
+nmap('<leader>t', function() require('snacks').terminal() end, 'Show terminal')
