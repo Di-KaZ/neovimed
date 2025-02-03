@@ -1,7 +1,7 @@
 return { -- optional blink completion source for require statements and module annotations
 	"saghen/blink.cmp",
 	version = '*',
-	build = 'cargo build --release',
+	-- build = 'cargo build --release',
 	opts = {
 		completion = {
 			list = {
