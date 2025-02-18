@@ -23,8 +23,10 @@ end
 
 -- Files management
 nmap("<C-e>", function() require('mini.files').open() end, "Find files")
-nmap("<leader>ff", function() require('telescope.builtin').find_files() end, "Find files")
-nmap("<leader>fw", function() require('telescope.builtin').live_grep() end, "Find match")
+nmap("<leader>ff", function() Snacks.picker.smart() end, "Find files")
+nmap("<leader>fk", function() Snacks.picker.keymaps({ preview = "none", layout = { preset = 'vscode' } }) end,
+	"Find keymap")
+nmap("<leader>fw", function() Snacks.picker.grep() end, "Find match")
 
 -- Lsp
 nmap("<S-k>", "Lspsaga hover_doc", "Hover")
@@ -34,9 +36,9 @@ nmap("ga", "Lspsaga code_action", "Code Actions")
 nmap("gj", "Lspsaga diagnostic_jump_next", "Next diagnostic")
 nmap("gk", "Lspsaga diagnostic_jump_prev", "Previous diagnostic")
 nmap("<leader>gr", "Lspsaga rename", "Rename")
-nmap("<leader>gd", function() require('telescope.builtin').diagnostics() end, "Diagnostics")
-nmap("<leader>gs", function() require('telescope.builtin').lsp_document_symbols() end, "Document Symbol")
-nmap("<leader>gS", function() require('telescope.builtin').lsp_workspace_symbols() end, "Workspace Symbols")
+nmap("<leader>gd", function() Snacks.picker.diagnostics() end, "Diagnostics")
+nmap("<leader>gs", function() Snacks.picker.lsp_symbols() end, "Document Symbol")
+nmap("<leader>gS", function() Snacks.picker.lsp_workspace_symbols() end, "Workspace Symbols")
 
 -- Git
 -- nmap('<leader>cn', "Neogit", "Neogit")
